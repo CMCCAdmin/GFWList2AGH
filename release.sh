@@ -254,12 +254,12 @@ function GenerateRules() {
         ;;
         unbound)
             domestic_dns=(
-                "tls://223.5.5.5@853#dns.alidns.com"
-                "tls://223.6.6.6@853#dns.alidns.com"
+                "223.5.5.5@853#dns.alidns.com"
+                "223.6.6.6@853#dns.alidns.com"
             )
             foreign_dns=(
-                "tls://8.8.4.4@853#dns.google"
-                "tls://8.8.8.8@853#dns.google"
+                "8.8.4.4@853#dns.google"
+                "8.8.8.8@853#dns.google"
             )
             forward_tls_upstream="yes"
             function GenerateRulesHeader() {
