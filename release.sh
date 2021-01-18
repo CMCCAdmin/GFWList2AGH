@@ -334,10 +334,10 @@ function OutputData() {
     #software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
     #software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
     ## Unbound
-    software_name="unbound" && generate_file="black" && generate_mode="full" && GenerateRules
-    software_name="unbound" && generate_file="black" && generate_mode="lite" && GenerateRules
-    software_name="unbound" && generate_file="white" && generate_mode="full" && GenerateRules
-    software_name="unbound" && generate_file="white" && generate_mode="lite" && GenerateRules
+    software_name="unbound" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules
+    software_name="unbound" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules
+    software_name="unbound" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules
+    software_name="unbound" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules
     cd .. && rm -rf ./Temp
     exit 0
 }
