@@ -272,20 +272,20 @@ function OutputData() {
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_split" && dns_mode="foreign" && GenerateRules
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_split" && dns_mode="foreign" && GenerateRules
     ## DNSMasq
-    #software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
-    #software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
-    #software_name="dnsmasq" && generate_file="white" && generate_mode="full" && GenerateRules
-    #software_name="dnsmasq" && generate_file="white" && generate_mode="lite" && GenerateRules
+    software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
+    software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
+    software_name="dnsmasq" && generate_file="white" && generate_mode="full" && GenerateRules
+    software_name="dnsmasq" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## Domain
-    #software_name="domain" && generate_file="black" && generate_mode="full" && GenerateRules
-    #software_name="domain" && generate_file="black" && generate_mode="lite" && GenerateRules
-    #software_name="domain" && generate_file="white" && generate_mode="full" && GenerateRules
-    #software_name="domain" && generate_file="white" && generate_mode="lite" && GenerateRules
+    software_name="domain" && generate_file="black" && generate_mode="full" && GenerateRules
+    software_name="domain" && generate_file="black" && generate_mode="lite" && GenerateRules
+    software_name="domain" && generate_file="white" && generate_mode="full" && GenerateRules
+    software_name="domain" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## SmartDNS
-    #software_name="smartdns" && generate_file="black" && generate_mode="full" && foreign_group="foreign" && GenerateRules
-    #software_name="smartdns" && generate_file="black" && generate_mode="lite" && foreign_group="foreign" && GenerateRules
-    #software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
-    #software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
+    software_name="smartdns" && generate_file="black" && generate_mode="full" && foreign_group="foreign" && GenerateRules
+    software_name="smartdns" && generate_file="black" && generate_mode="lite" && foreign_group="foreign" && GenerateRules
+    software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
+    software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
     cd .. && rm -rf ./Temp
     exit 0
 }
