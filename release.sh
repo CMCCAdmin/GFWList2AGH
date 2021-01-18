@@ -265,29 +265,6 @@ function GenerateRules() {
             function GenerateRulesHeader() {
                 echo "forward-zone:" >> ../${file_name}
             }
-            function GenerateRulesBody() {
-                if [ "${generate_mode}" == "full" ]; then
-                    if [ "${generate_file}" == "black" ]; then
-                        for gfwlist_data_task in "${!gfwlist_data[@]}"; do
-                            echo "    name: \"${gfwlist_data[$gfwlist_data_task]}.\"" >> ../${file_name}
-                        done
-                    elif [ "${generate_file}" == "white" ]; then
-                        for cnacc_data_task in "${!cnacc_data[@]}"; do
-                            echo "    name: \"${cnacc_data[$cnacc_data_task]}.\"" >> ../${file_name}
-                        done
-                    fi
-                elif [ "${generate_mode}" == "lite" ]; then
-                    if [ "${generate_file}" == "black" ]; then
-                        for lite_gfwlist_data_task in "${!lite_gfwlist_data[@]}"; do
-                            echo "    name: \"${lite_gfwlist_data[$lite_gfwlist_data_task]}.\"" >> ../${file_name}
-                        done
-                    elif [ "${generate_file}" == "white" ]; then
-                        for lite_cnacc_data_task in "${!lite_cnacc_data[@]}"; do
-                            echo "    name: \"${lite_cnacc_data[$lite_cnacc_data_task]}.\"" >> ../${file_name}
-                        done
-                    fi
-                fi
-            }
             function GenerateRulesFooter() {
                 echo "    forward-tls-upstream: ${forward_tls_upstream}" >> ../${file_name}
                 if [ "${dns_mode}" == "domestic" ]; then
@@ -300,12 +277,27 @@ function GenerateRules() {
                     done
                 fi
             }
-            function GenerateRulesProcess() {
-                GenerateRulesHeader
-                GenerateRulesBody
-                GenerateRulesFooter
-            }
-            FileName && GenerateRulesProcess
+            if [ "${generate_mode}" == "full" ]; then
+                if [ "${generate_file}" == "black" ]; then
+                    FileName && for gfwlist_data_task in "${!gfwlist_data[@]}"; do
+                        GenerateRulesHeader && echo "    name: \"${gfwlist_data[$gfwlist_data_task]}.\"" >> ../${file_name} && GenerateRulesFooter
+                    done
+                elif [ "${generate_file}" == "white" ]; then
+                    FileName && for cnacc_data_task in "${!cnacc_data[@]}"; do
+                        GenerateRulesHeader && echo "    name: \"${cnacc_data[$cnacc_data_task]}.\"" >> ../${file_name} && GenerateRulesFooter
+                    done
+                fi
+            elif [ "${generate_mode}" == "lite" ]; then
+                if [ "${generate_file}" == "black" ]; then
+                    FileName && for lite_gfwlist_data_task in "${!lite_gfwlist_data[@]}"; do
+                        GenerateRulesHeader && echo "    name: \"${lite_gfwlist_data[$lite_gfwlist_data_task]}.\"" >> ../${file_name} && GenerateRulesFooter
+                    done
+                elif [ "${generate_file}" == "white" ]; then
+                    FileName && for lite_cnacc_data_task in "${!lite_cnacc_data[@]}"; do
+                        GenerateRulesHeader && echo "    name: \"${lite_cnacc_data[$lite_cnacc_data_task]}.\"" >> ../${file_name} && GenerateRulesFooter
+                    done
+                fi
+            fi
         ;;
         *)
             exit 1
@@ -342,7 +334,7 @@ function OutputData() {
     #software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
     #software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
     ## Unbound
-    software_name="unbound" && generate_file="white" && generate_mode="lite" && GenerateRules
+    software_name="unbound" && generate_file="black" && generate_mode="full" && GenerateRules
     software_name="unbound" && generate_file="black" && generate_mode="lite" && GenerateRules
     software_name="unbound" && generate_file="white" && generate_mode="full" && GenerateRules
     software_name="unbound" && generate_file="white" && generate_mode="lite" && GenerateRules
