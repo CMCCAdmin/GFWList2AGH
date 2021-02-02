@@ -60,7 +60,7 @@ function GenerateRules() {
         fi
         if [ "${software_name}" == "adguardhome" ] || [ "${software_name}" == "domain" ]; then
             file_extension="txt"
-        elif [ "${software_name}" == "dnsmasq" ] || [ "${software_name}" == "smartdns" ] || [ "${software_name}" == "unbound" ]; then
+        elif [ "${software_name}" == "bind9" ] || [ "${software_name}" == "dnsmasq" ] || [ "${software_name}" == "smartdns" ] || [ "${software_name}" == "unbound" ]; then
             file_extension="conf"
         else
             file_extension="dev"
@@ -365,10 +365,10 @@ function OutputData() {
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_split" && dns_mode="foreign" && GenerateRules
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_split" && dns_mode="foreign" && GenerateRules
     ## Bind9
-    software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
-    software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
-    software_name="dnsmasq" && generate_file="white" && generate_mode="full" && GenerateRules
-    software_name="dnsmasq" && generate_file="white" && generate_mode="lite" && GenerateRules
+    software_name="bind9" && generate_file="black" && generate_mode="full" && GenerateRules
+    software_name="bind9" && generate_file="black" && generate_mode="lite" && GenerateRules
+    software_name="bind9" && generate_file="white" && generate_mode="full" && GenerateRules
+    software_name="bind9" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## DNSMasq
     software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
     software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
