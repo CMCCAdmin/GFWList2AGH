@@ -104,13 +104,12 @@ function GenerateRules() {
     case ${software_name} in
         adguardhome)
             domestic_dns=(
-                "tls://dns.alidns.com"
+                "https://doh.pub:443/dns-query"
+                "tls://dns.alidns.com:853"
             )
             foreign_dns=(
-                "tls://dns.google"
-                "tls://1dot1dot1dot1.cloudflare-dns.com"
-                "https://doh.opendns.com/dns-query"
-                "tls://dns11.quad9.net"
+                "https://doh.opendns.com:443/dns-query"
+                "tls://dns.google:853"
             )
             function GenerateRulesHeader() {
                 echo -n "[/" >> "${file_path}"
@@ -153,13 +152,13 @@ function GenerateRules() {
                 GenerateRulesFooter
             }
             if [ "${dns_mode}" == "default" ]; then
-                FileName && GenerateDefaultUpstream && GenerateRulesProcess
+                FileName && GenerateRulesProcess
             elif [ "${dns_mode}" == "domestic" ]; then
-                FileName && GenerateDefaultUpstream && for domestic_dns_task in "${!domestic_dns[@]}"; do
+                FileName && for domestic_dns_task in "${!domestic_dns[@]}"; do
                     GenerateRulesProcess
                 done
             elif [ "${dns_mode}" == "foreign" ]; then
-                FileName && GenerateDefaultUpstream && for foreign_dns_task in "${!foreign_dns[@]}"; do
+                FileName && for foreign_dns_task in "${!foreign_dns[@]}"; do
                    GenerateRulesProcess
                 done
             fi
@@ -366,30 +365,30 @@ function OutputData() {
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="full_split" && dns_mode="foreign" && GenerateRules
     software_name="adguardhome" && generate_file="whiteblack" && generate_mode="lite_split" && dns_mode="foreign" && GenerateRules
     ## Bind9
-    software_name="bind9" && generate_file="black" && generate_mode="full" && GenerateRules
-    software_name="bind9" && generate_file="black" && generate_mode="lite" && GenerateRules
-    software_name="bind9" && generate_file="white" && generate_mode="full" && GenerateRules
-    software_name="bind9" && generate_file="white" && generate_mode="lite" && GenerateRules
+    #software_name="bind9" && generate_file="black" && generate_mode="full" && GenerateRules
+    #software_name="bind9" && generate_file="black" && generate_mode="lite" && GenerateRules
+    #software_name="bind9" && generate_file="white" && generate_mode="full" && GenerateRules
+    #software_name="bind9" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## DNSMasq
-    software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
-    software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
-    software_name="dnsmasq" && generate_file="white" && generate_mode="full" && GenerateRules
-    software_name="dnsmasq" && generate_file="white" && generate_mode="lite" && GenerateRules
+    #software_name="dnsmasq" && generate_file="black" && generate_mode="full" && GenerateRules
+    #software_name="dnsmasq" && generate_file="black" && generate_mode="lite" && GenerateRules
+    #software_name="dnsmasq" && generate_file="white" && generate_mode="full" && GenerateRules
+    #software_name="dnsmasq" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## Domain
-    software_name="domain" && generate_file="black" && generate_mode="full" && GenerateRules
-    software_name="domain" && generate_file="black" && generate_mode="lite" && GenerateRules
-    software_name="domain" && generate_file="white" && generate_mode="full" && GenerateRules
-    software_name="domain" && generate_file="white" && generate_mode="lite" && GenerateRules
+    #software_name="domain" && generate_file="black" && generate_mode="full" && GenerateRules
+    #software_name="domain" && generate_file="black" && generate_mode="lite" && GenerateRules
+    #software_name="domain" && generate_file="white" && generate_mode="full" && GenerateRules
+    #software_name="domain" && generate_file="white" && generate_mode="lite" && GenerateRules
     ## SmartDNS
-    software_name="smartdns" && generate_file="black" && generate_mode="full" && foreign_group="foreign" && GenerateRules
-    software_name="smartdns" && generate_file="black" && generate_mode="lite" && foreign_group="foreign" && GenerateRules
-    software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
-    software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
+    #software_name="smartdns" && generate_file="black" && generate_mode="full" && foreign_group="foreign" && GenerateRules
+    #software_name="smartdns" && generate_file="black" && generate_mode="lite" && foreign_group="foreign" && GenerateRules
+    #software_name="smartdns" && generate_file="white" && generate_mode="full" && domestic_group="domestic" && GenerateRules
+    #software_name="smartdns" && generate_file="white" && generate_mode="lite" && domestic_group="domestic" && GenerateRules
     ## Unbound
-    software_name="unbound" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules
-    software_name="unbound" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules
-    software_name="unbound" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules
-    software_name="unbound" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules
+    #software_name="unbound" && generate_file="black" && generate_mode="full" && dns_mode="foreign" && GenerateRules
+    #software_name="unbound" && generate_file="black" && generate_mode="lite" && dns_mode="foreign" && GenerateRules
+    #software_name="unbound" && generate_file="white" && generate_mode="full" && dns_mode="domestic" && GenerateRules
+    #software_name="unbound" && generate_file="white" && generate_mode="lite" && dns_mode="domestic" && GenerateRules
     cd .. && rm -rf ./Temp
     exit 0
 }
