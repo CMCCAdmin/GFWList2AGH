@@ -104,12 +104,13 @@ function GenerateRules() {
     case ${software_name} in
         adguardhome)
             domestic_dns=(
-                "https://doh.pub:443/dns-query"
-                "tls://dns.alidns.com:853"
+                "tls://dns.alidns.com"
             )
             foreign_dns=(
-                "https://doh.opendns.com:443/dns-query"
-                "tls://dns.google:853"
+                "tls://dns.google"
+                "tls://1dot1dot1dot1.cloudflare-dns.com"
+                "https://doh.opendns.com/dns-query"
+                "tls://dns11.quad9.net"
             )
             function GenerateRulesHeader() {
                 echo -n "[/" >> "${file_path}"
