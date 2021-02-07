@@ -1753,6 +1753,7 @@
 3322.net
 3322.org
 3323.com
+3328.cn
 3339auto.com
 333ck.com
 333cn.com
@@ -3889,6 +3890,7 @@
 90tank.com
 90vm.com
 90zm.net
+91.com
 910app.com
 91160.com
 911pop.com
@@ -6231,6 +6233,7 @@ astrategy.beacon.qq.com
 astrocn.org
 asus.com.cn
 asussmart.com
+asvcbnq.cn
 asyzonline.com
 at-img1.tdimg.com
 at-img2.tdimg.com
@@ -6483,6 +6486,7 @@ b3logfile.com
 b5200.net
 b5b6.com
 b5m.com
+b5wx1.cn
 b612kaji.com
 b6ss.com
 b8yx.com
@@ -11416,6 +11420,7 @@ cz2sc.com
 cz365.com
 cz8.com
 cz89.com
+cz9k8b.top
 czbanbantong.com
 czbank.com
 czcarbon.com
@@ -11499,6 +11504,7 @@ d1lx.com
 d1net.com
 d1tele.com
 d1tv.com
+d1wn3.cn
 d1xz.net
 d1ye.com
 d2.mobaders.com
@@ -11789,6 +11795,7 @@ data-news.cdn.cootekservice.com
 data-pic.cdn.cootekservice.com
 data.3975.com
 data.ads.oppomobile.com
+data.danmu.baofeng.com
 data.haoma.sogou.com
 data.qq.com
 data.vod.itc.cn
@@ -12985,6 +12992,7 @@ dsfdc.com
 dsfof.com
 dshigao.com
 dshrc.com
+dsjre.com
 dskb.co
 dsmzyy.com
 dsmzyy120.com
@@ -13140,7 +13148,6 @@ duxiaoman.com
 duxinjianli.com
 duxiu.com
 duyao001.com
-duyidu.com
 duyixing.com
 duzhe.com
 duzhebao.com
@@ -13281,7 +13288,26 @@ e-stat.huya.com
 e-tiller.com
 e.01w47q.cn
 e.2hqd0b.cn
+e.91.com
+e.ad.xiaomi.com
+e.asvcbnq.cn
+e.b5wx1.cn
 e.baidu.com
+e.banmamedia.com
+e.cn.miaozhen.com
+e.cz9k8b.top
+e.d1wn3.cn
+e.domob.cn
+e.domob.com.cn
+e.dsjre.com
+e.ejsehjv.cn
+e.g7wf6.cn
+e.gxkyl.com
+e.h2ww6.cn
+e.j9wd6.cn
+e.k2wx5.cn
+e.k9wz7.cn
+e.kuaishou.com
 e.qq.com
 e0514.com
 e0575.com
@@ -14007,6 +14033,7 @@ ejoy365hk.com
 ejoy99.com
 ejoychina.com
 ejrfood.com
+ejsehjv.cn
 ejttp.com
 eju.com
 ejudata.com
@@ -16742,6 +16769,7 @@ g72.com
 g7430.com
 g77775555.com
 g77776666.com
+g7wf6.cn
 g806.com
 g88885555.com
 g88886666.com
@@ -18876,6 +18904,7 @@ gxkjbg.com
 gxkjdns.com
 gxkjec.com
 gxkjjt.com
+gxkyl.com
 gxlcms.com
 gxlxs2008.net
 gxmenjin.com
@@ -19172,6 +19201,7 @@ h2ero.com
 h2ex.com
 h2os.com
 h2vm.com
+h2ww6.cn
 h3c.com
 h3c.com.hk
 h3dns.net
@@ -25411,6 +25441,7 @@ j1sc.com
 j3pz.com
 j66.net
 j9p.com
+j9wd6.cn
 jaadee.com
 jaadee.net
 jabizb.com
@@ -28073,6 +28104,7 @@ k1u.com
 k259.com
 k2938.com
 k2ma.com
+k2wx5.cn
 k345.cc
 k366.com
 k369.com
@@ -28105,6 +28137,7 @@ k8w.wang
 k8ym.com
 k913.com
 k99.wang
+k9wz7.cn
 ka114.net
 ka20.com
 ka5188.com
