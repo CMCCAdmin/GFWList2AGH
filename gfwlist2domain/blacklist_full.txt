@@ -11579,6 +11579,7 @@ chrome.com
 chromeba.net
 chromebook.com
 chromecast.com
+chromeenterprise.google
 chromeexperiments.com
 chromegae.com
 chromeos.dev
